@@ -2,7 +2,13 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var port = process.env.PORT || 3000
 var app = express();
- 
+// SDK de Mercado Pago
+const mercadopago = require ('mercadopago');
+
+// Configura credenciais
+mercadopago.configure({
+  access_token: 'APP_USR-6096a634-0b35-452c-94c9-a18adb8ffb15'
+});
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
