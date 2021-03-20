@@ -14,7 +14,7 @@ class PaymentService {
 
   async createPaymentMercadoPago(name, price, unit, img) {
     const url = `${this.mercadoPagoUrl}/preferences?access_token=${this.tokensMercadoPago.test.access_token}`;
-    img= 'https://leojaneis-mp-commerce-nodejs.herokuapp.com'+img.substring(1);
+    img= 'https://leojaneis-mp-ecommerce-nodejs.herokuapp.com/'+img.substring(1);
     const items = [
       {
         id: 1234,
@@ -56,9 +56,9 @@ class PaymentService {
         installments: 6,
       },
       back_urls: {
-        success: "https://leonardojaneis-mp-commerce-nodejs.herokuapp.com/success",
-        pending: "https://leojaneis-mp-commerce-nodejs.herokuapp.com/pending",
-        failure: "https://leonardojaneis-mp-commerce-nodejs.herokuapp.com/error"
+        success: "https://leojaneis-mp-ecommerce-nodejs.herokuapp.com/success",
+        pending: "https://leojaneis-mp-ecommerce-nodejs.herokuapp.com/pending",
+        failure: "https://leojaneis-mp-ecommerce-nodejs.herokuapp.com/error"
       },
       notification_url: "https://webhook.site/ba74932a-af75-4806-8387-dae771cbe0af",
       auto_return: "approved"

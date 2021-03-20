@@ -3,7 +3,7 @@ var exphbs  = require('express-handlebars');
 var port = process.env.PORT || 3000
 var app = express();
 
-//Colocar webhook dinâmico e enviar esta caralha pós o vídeo
+
 const PaymentController = require("./controller/PaymentController");
 const PaymentService = require("./classServ/PaymentService");
 const PaymentInstance = new PaymentController(new PaymentService());
