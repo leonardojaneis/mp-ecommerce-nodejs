@@ -1,6 +1,5 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
-var port = process.env.PORT || 3000
 var app = express();
 
 
@@ -43,4 +42,4 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
-app.listen(port);
+app.listen(process.env.PORT || 3000);
