@@ -2,7 +2,6 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var app = express();
 
-
 const PaymentController = require("./controller/PaymentController");
 const PaymentService = require("./classServ/PaymentService");
 const PaymentInstance = new PaymentController(new PaymentService());
@@ -42,6 +41,6 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 5000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
